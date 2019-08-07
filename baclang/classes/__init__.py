@@ -1,1 +1,1 @@
-from . evaluated_symbol import EvaluatedSymbol
+from . symbol_map import SymbolMap

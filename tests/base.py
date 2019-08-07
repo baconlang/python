@@ -1,17 +1,19 @@
-import collections
 import string
 
 field_names = list(string.ascii_lowercase)
 defaults = [0] * len(field_names)
-SymbolMap = collections.namedtuple(
-    'SymbolMap',
-    field_names,
-    defaults=defaults,
-)
 
-def symgem(ohe):
-    symbol_map = {}
-    field_names = list(string.ascii_lowercase)
-    for idx, enc in enumerate(ohe[2:]):
-        symbol_map[field_names[idx]] = int(enc)
-    return symbol_map
+
+def sym_gen(binary):
+    return {
+        string.ascii_lowercase[idx]:int(bit)
+        for idx, bit in enumerate(binary[2:])
+    }
+
+
+def compare_lists(*args):
+    evaluation = True
+    for idx in range(len(args)-2):
+        evaluation = evaluation\
+            and args[idx].sort() == args[idx+1].sort()
+    return evaluation
