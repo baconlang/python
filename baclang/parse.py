@@ -1,3 +1,6 @@
+from . errors import BACLangSyntaxError
+
+
 def parse(raw):
     symbols = [
         symbol.strip()
@@ -13,6 +16,6 @@ def parse(raw):
 
         else:
             # Only valid strings are legal symbols
-            raise SyntaxError(symbol)
+            raise BACLangSyntaxError(symbol)
 
     return symbols

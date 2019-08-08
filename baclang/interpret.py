@@ -1,4 +1,5 @@
 from . parse import parse
+from . errors import BACLangEvaluationError
 
 
 def interpret(
@@ -7,15 +8,14 @@ def interpret(
     evaluator=False,
 ):
     if not symbol_map and not evaluator:
-        raise TypeError('Missing method of evaluation')
+        raise BACLangEvaluationError()
 
     if symbol_map and evaluator:
-        raise TypeError('blah')
+        raise BACLangEvaluationError()
 
     parsed_expression = parse(expression)
     queue = []
     for symbol in parsed_expression:
-        symbol = symbol.strip()
         if symbol == "[" or symbol == "]":
             queue.append(symbol)
             continue
@@ -128,10 +128,7 @@ def interpret(
         idx += 1
 
     return [
-        type(symbol) is EvaluatedCluster
-        and symbol.value
-        or symbol
-        for symbol in queue[0]
+        symbol for symbol in queue[0]
     ]
 
 
