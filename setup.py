@@ -8,7 +8,7 @@ setup(
     author='Caleb Martinez',
     author_email='contact@calebmartinez.com',
     url='https://github.com/baclang/python',
-    download_url='https://github.com/baclang/python/archive/v_01.tar.gz',
+    download_url='https://github.com/baclang/python/archive/v1.0.0.tar.gz',
     keywords=['language', 'interpreter', 'constraint', 'logic'],
     install_requires=[],
     classifiers=[
