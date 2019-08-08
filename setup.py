@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
     name='baclang',
     packages=['baclang'],
-    version='v1.0.0',
+    version='v1.0.1',
     license='MIT',
-    description='Python implementation of the BACLang compiler',
+    description='Python implementation of the BACLang interpreter',
     author='Caleb Martinez',
     author_email='contact@calebmartinez.com',
     url='https://github.com/baclang/python',
-    download_url='https://github.com/baclang/python/archive/v1.0.0.tar.gz',
+    download_url='https://github.com/baclang/python/archive/v1.0.1.tar.gz',
     keywords=['language', 'interpreter', 'constraint', 'logic'],
     install_requires=[],
     classifiers=[

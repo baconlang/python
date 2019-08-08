@@ -1,5 +1,5 @@
 from . parse import parse
-from . errors import BACLangEvaluationError
+from . errors.baclang_evaluation_error import BACLangEvaluationError
 
 
 def interpret(

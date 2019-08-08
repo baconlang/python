@@ -1,4 +1,4 @@
-from . errors import BACLangSyntaxError
+from . errors.baclang_syntax_error import BACLangSyntaxError
 
 
 def parse(raw):
