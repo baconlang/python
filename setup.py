@@ -1,6 +1,6 @@
 from distutils.core import setup
 setup(
-    name='BACLang',
+    name='baclang',
     packages=['baclang'],
     version='v1.0.0',
     license='MIT',
