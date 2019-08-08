@@ -1,4 +1,4 @@
-# baclang - Bracket annotated constraint interpreter
+# [baclang](https://github.com/baclang/python) - Bracket annotated constraint interpreter
 
 ---
 
