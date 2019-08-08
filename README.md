@@ -1,4 +1,4 @@
-# baclang --- Bracket annotated constraint interpreter
+# baclang - Bracket annotated constraint interpreter
 
 ---
 
@@ -9,7 +9,7 @@ BAClang is a logical programming language dedicated to evaluating constraint bas
 
 ---
 
-##### baclang.interpret(expression, symbol_map=False, evaluator=False)
+### baclang.interpret(expression, symbol_map=False, evaluator=False)
 Return an array representing the result of a BAC expression given either a symbol map or evaluator. If both a symbol map or evaluator is passed in, a `BACLangEvaluationError` is raised.
 
 `symbol map` is a dictionary used to map strings in the BAC expression to a value. This determines which strings evaluate as truthy in the BAC. If strings within the BAC are not found in the object, the string will default to falsey during evaluation.
@@ -64,7 +64,7 @@ Return an array representing the result of a BAC expression given either a symbo
 
 ---
 
-##### baclang.generate_symbol_maps(expression)
+### baclang.generate_symbol_maps(expression)
 Returns a list of __baclang.SymbolMap__ representing all possible symbol map inputs for a given expression.
 
 ```
@@ -77,7 +77,7 @@ Returns a list of __baclang.SymbolMap__ representing all possible symbol map inp
 
 ---
 
-##### baclang.generate_satisfactory_symbol_maps(expression)
+### baclang.generate_satisfactory_symbol_maps(expression)
 Returns a list of __baclang.SymbolMap__ representing all symbol map inputs for a given expression that result in a non-empty result.
 
 ```
