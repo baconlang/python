@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
     name='BACLang',
     packages=['baclang'],
-    version='1.0',
+    version='v1.0.0',
     license='MIT',
     description='Python implementation of the BACLang compiler',
     author='Caleb Martinez',
