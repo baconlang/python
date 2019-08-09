@@ -1,4 +1,4 @@
-from . . import interpret
+from baclang.interpret import interpret
 
 
 class SymbolMap:

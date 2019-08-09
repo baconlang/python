@@ -1,5 +1,5 @@
-from . parse import parse
-from . classes.symbol_map import SymbolMap
+from baclang.parse import parse
+from baclang.classes.symbol_map import SymbolMap
 
 
 def parse_symbols(expression):
