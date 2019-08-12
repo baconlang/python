@@ -1,10 +1,10 @@
 from . base import compare_lists
-from baclang import generate_satisfactory_symbol_maps
+from baclang import generate_solutions
 
 
 def test_basic():
     assert compare_lists(
-        generate_satisfactory_symbol_maps('["a"]'),
+        generate_solutions('["a"]'),
         [
             [],
             ["a"],
@@ -14,7 +14,7 @@ def test_basic():
 
 def test_medium():
     assert compare_lists(
-        generate_satisfactory_symbol_maps('["a", "b"]'),
+        generate_solutions('["a", "b"]'),
         [
             [],
             ["a"],
@@ -23,7 +23,7 @@ def test_medium():
     )
 
     assert compare_lists(
-        generate_satisfactory_symbol_maps('[["a", "b"]]'),
+        generate_solutions('[["a", "b"]]'),
         [
             [],
             ["a", "b"],
@@ -33,7 +33,7 @@ def test_medium():
 
 def test_advanced():
     assert compare_lists(
-        generate_satisfactory_symbol_maps(
+        generate_solutions(
             '["a", [["b", ["c", [["d", "e"]], "d"] ]] ]'
         ),
         [

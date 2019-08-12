@@ -24,7 +24,7 @@ def generate_symbol_maps(expression):
     ]
 
 
-def generate_satisfactory_symbol_maps(expression):
+def generate_solutions(expression):
     return [list(evaluation) for evaluation in set([
         tuple(symbol.evaluation)
         for symbol in generate_symbol_maps(expression)

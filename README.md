@@ -77,15 +77,17 @@ Returns a list of __baclang.SymbolMap__ representing all possible symbol map inp
 
 ---
 
-### baclang.generate_satisfactory_symbol_maps(expression)
-Returns a list of __baclang.SymbolMap__ representing all symbol map inputs for a given expression that result in a non-empty result.
+### baclang.generate_solutions(expression)
+Returns a list of lists representing all solutions for a given expression.
 
 ```
 >>> from baclang import generate_symbol_maps
->>> generate_satisfactory_symbol_maps('["a"]')
-[{'symbol_map': {'a': 0}, 'evaluation': []}, {'symbol_map': {'a': 1}, 'evaluation': ['a']}]
->>> generate_satisfactory_symbol_maps('["a", "b"]')
-[{'symbol_map': {'b': 0, 'a': 0}, 'evaluation': []}, {'symbol_map': {'b': 0, 'a': 1}, 'evaluation': ['a']}, {'symbol_map': {'b': 1, 'a': 0}, 'evaluation': ['b']}, {'symbol_map': {'b': 1, 'a': 1}, 'evaluation': ['a']}]
+>>> generate_solutions('["a"]')
+[[], ['a']]
+>>> generate_solutions('["a", "b"]')
+[[], ['a'], ['b']]
+>>> generate_solutions('[["a", "b"]]')
+[[], ['a', 'b']]
 ```
 
 ---

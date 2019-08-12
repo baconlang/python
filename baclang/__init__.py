@@ -6,5 +6,5 @@ from . baclang_syntax_error import BACLangSyntaxError
 from . utils import (
     parse_symbols,
     generate_symbol_maps,
-    generate_satisfactory_symbol_maps,
+    generate_solutions,
 )
