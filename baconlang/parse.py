@@ -1,4 +1,4 @@
-from baclang.baclang_syntax_error import BACLangSyntaxError
+from baconlang.baconlang_syntax_error import BACONLangSyntaxError
 
 
 def parse(raw):
@@ -16,6 +16,6 @@ def parse(raw):
 
         else:
             # Only valid strings are legal symbols
-            raise BACLangSyntaxError(symbol)
+            raise BACONLangSyntaxError(symbol)
 
     return symbols

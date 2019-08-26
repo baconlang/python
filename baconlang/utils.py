@@ -1,5 +1,5 @@
-from baclang.parse import parse
-from baclang.symbol_map import SymbolMap
+from baconlang.parse import parse
+from baconlang.symbol_map import SymbolMap
 
 
 def parse_symbols(expression):

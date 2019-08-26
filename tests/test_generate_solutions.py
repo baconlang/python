@@ -1,5 +1,5 @@
 from . base import compare_lists
-from baclang import generate_solutions
+from baconlang import generate_solutions
 
 
 def test_basic():

@@ -1,4 +1,4 @@
-from baclang import parse_symbols
+from baconlang import parse_symbols
 from . base import compare_lists
 
 

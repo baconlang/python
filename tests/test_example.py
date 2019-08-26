@@ -1,4 +1,4 @@
-from baclang import interpret
+from baconlang import interpret
 groceries = '[ [["food_lion", "pasta", "lettuce", "soap", [ [["ham_buns", "hamburgers"]], [["hot_buns", "hotdogs"]] ] ]], [["harris_teeter", "potatos", "potatos"]]]'
 
 

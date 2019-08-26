@@ -2,7 +2,7 @@ import cProfile
 import pstats
 from itertools import repeat
 
-from baclang import interpret, generate_symbol_maps
+from baconlang import interpret, generate_symbol_maps
 
 N = 500
 

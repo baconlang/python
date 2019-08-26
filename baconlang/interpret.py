@@ -1,5 +1,5 @@
-from baclang.parse import parse
-from baclang.baclang_evaluation_error import BACLangEvaluationError
+from baconlang.parse import parse
+from baconlang.baconlang_evaluation_error import BACONLangEvaluationError
 
 
 def interpret(
@@ -8,10 +8,10 @@ def interpret(
     evaluator=False,
 ):
     if not symbol_map and not evaluator:
-        raise BACLangEvaluationError()
+        raise BACONLangEvaluationError()
 
     if symbol_map and evaluator:
-        raise BACLangEvaluationError()
+        raise BACONLangEvaluationError()
 
     parsed_expression = parse(expression)
     queue = []

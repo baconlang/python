@@ -1,4 +1,4 @@
-from baclang import generate_symbol_maps, SymbolMap
+from baconlang import generate_symbol_maps, SymbolMap
 
 
 def test_basic():

@@ -1,4 +1,4 @@
-from baclang import (
+from baconlang import (
     interpret,
     generate_symbol_maps,
 )

@@ -1,21 +1,21 @@
-# [baclang](https://github.com/baclang/python) - Bracket annotated constraint interpreter
+# [baconlang](https://github.com/baconlang/python) - Bracket Annotated CONstraint interpreter
 
 ---
 
-BAClang is a logical programming language dedicated to evaluating constraint based expressions using only strings and square brackets. This package allows for:
-- Parsing of valid BACs using either symbol maps or evaluators
-- Generation of all possible symbol maps for a given constraint
-- Generation of all satisfactory symbol maps for a given constraint
+BACONLang is a logical programming language dedicated to evaluating constraint based expressions using only strings and square brackets. This package allows for:
+- Parsing of valid BACON expressions using either symbol maps or evaluators
+- Generation of all possible symbol maps for a given BACON expression
+- Generation of all solutions for a given BACON expression
 
 ---
 
-### baclang.interpret(expression, symbol_map=False, evaluator=False)
-Return an array representing the result of a BAC expression given either a symbol map or evaluator. If both a symbol map or evaluator is passed in, a `BACLangEvaluationError` is raised.
+### baconlang.interpret(expression, symbol_map=False, evaluator=False)
+Return an array representing the result of a BACON expression given either a symbol map or evaluator. If both a symbol map or evaluator is passed in, a `BACONLangEvaluationError` is raised.
 
-`symbol map` is a dictionary used to map strings in the BAC expression to a value. This determines which strings evaluate as truthy in the BAC. If strings within the BAC are not found in the object, the string will default to falsey during evaluation.
+`symbol map` is a dictionary used to map strings in the BACON expression to a value. This determines which strings evaluate as truthy in the BACON expression. If strings within the BACON expression are not found in the object, the string will default to falsey during evaluation.
 
 ```
->>> from baclang import interpret
+>>> from baconlang import interpret
 >>> expression = '[["a", "b", "c"]]'
 >>> symbol_map = dict(
 >>>     a=True,
@@ -35,7 +35,7 @@ Return an array representing the result of a BAC expression given either a symbo
 `evaluator` is a method that evaluates sub-expressions as necessary during interpretation. When the interpreter needs to evaluate a collective group of strings, it calls `evaluator` with a list containing said strings. The return value of `evaluator` determines if the group of strings evaluates to truthy or falsey.
 
 ```
->>> from baclang import interpret
+>>> from baconlang import interpret
 >>> expression = '["a", "b", "c"]'
 >>> def evaluator(symbols):
 >>>     for symbol in symbols:
@@ -64,11 +64,11 @@ Return an array representing the result of a BAC expression given either a symbo
 
 ---
 
-### baclang.generate_symbol_maps(expression)
-Returns a list of __baclang.SymbolMap__ representing all possible symbol map inputs for a given expression.
+### baconlang.generate_symbol_maps(expression)
+Returns a list of __baconlang.SymbolMap__ representing all possible symbol map inputs for a given expression.
 
 ```
->>> from baclang import generate_symbol_maps
+>>> from baconlang import generate_symbol_maps
 >>> generate_symbol_maps('["a"]')
 [{'symbol_map': {'a': 0}, 'evaluation': []}, {'symbol_map': {'a': 1}, 'evaluation': ['a']}]
 >>> generate_symbol_maps('["a", "b"]')
@@ -77,11 +77,11 @@ Returns a list of __baclang.SymbolMap__ representing all possible symbol map inp
 
 ---
 
-### baclang.generate_solutions(expression)
+### baconlang.generate_solutions(expression)
 Returns a list of lists representing all solutions for a given expression.
 
 ```
->>> from baclang import generate_symbol_maps
+>>> from baconlang import generate_symbol_maps
 >>> generate_solutions('["a"]')
 [[], ['a']]
 >>> generate_solutions('["a", "b"]')
@@ -92,17 +92,17 @@ Returns a list of lists representing all solutions for a given expression.
 
 ---
 
-## class baclang.SymbolMap(expression, symbol_map)
-Return an instance of `baclang.SymbolMap` that contains the provided symbol map as well as the result of evaluating the symbol map against a BAC expression.
+## class baconlang.SymbolMap(expression, symbol_map)
+Return an instance of `baconlang.SymbolMap` that contains the provided symbol map as well as the result of evaluating the symbol map against a BACON expression.
 
 #### symbol_map
 The symbol_map provided upon instantiation
 
 #### evaluation
-The result of the evaluated BAC expression given the provided symbol map
+The result of the evaluated BACON expression given the provided symbol map
 
 ```
->>> from baclang.classes import SymbolMap
+>>> from baconlang.classes import SymbolMap
 >>> expression = '["a", "b", "c"]'
 >>> raw_symbol_map = dict(
 >>>     a=False,
